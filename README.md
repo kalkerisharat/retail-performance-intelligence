@@ -3,109 +3,77 @@
 
 >   End-to-end Business Intelligence & Analytics pipeline using Python, MySQL, SQL, Power BI and DAX  
 
-![Dashboard Preview](screenshots/dashboard.png)
+An end-to-end sales analytics project that transforms raw Superstore transactional data into actionable business insights through   Python-based data analysis, MySQL data storage, SQL analytics, and an interactive Power BI dashboard  .
 
-   Overview
-
-  Retail Performance Intelligence   is an end-to-end data analytics project that transforms raw retail transaction data into actionable business insights.
-
-The project combines   Python for data validation and analysis, MySQL for structured data storage, SQL for business analysis, and Power BI + DAX for interactive business intelligence reporting.  
-
-Rather than focusing only on revenue, the project analyzes the relationship between:
-
-- Sales
-- Profitability
-- Discounts
-- Products
-- Customers
-- Regions
-- Segments
-- Shipping
-- Time
-
-The objective is to identify   what drives revenue, what drives profit, and where the business is losing money.  
+The project focuses on understanding   sales performance, profitability, customer behavior, regional performance, discount impact, product performance, and operational trends  .
 
 ---
 
-   🎯 Business Questions
+   🚀 Project Overview
 
-The analysis was designed around practical business questions:
+Businesses generate large volumes of transactional data, but raw data alone does not provide actionable information.
 
-- What are the company's overall sales and profitability?
-- Which categories and sub-categories drive profit?
-- Which products generate the highest and lowest profit?
-- Which regions perform best?
-- Which customer segments are most profitable?
-- How does discounting affect profitability?
-- Which shipping modes perform best?
-- Which customers generate the most and least profit?
-- How do sales and profit change over time?
-- Are there data-quality issues that could affect analysis?
+This project builds a complete analytics workflow:
 
----
+   
+                    RAW DATA
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Python + Pandas │
+              │ Data Validation │
+              │ Exploratory     │
+              │ Analysis        │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │     MySQL       │
+              │ Data Storage    │
+              │ & Transformation│
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │      SQL        │
+              │ Business        │
+              │ Analysis        │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Power BI + DAX  │
+              │ Interactive BI  │
+              │ Dashboard       │
+              └────────┬────────┘
+                       │
+                       ▼
+               BUSINESS INSIGHTS
 
-  🏗️ End-to-End Architecture
+🎯 Business Objectives
 
-   text
-                 RAW TRANSACTION DATA
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Python + Pandas │
-                │                 │
-                │ • Load          │
-                │ • Validate      │
-                │ • Analyze       │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │      MySQL      │
-                │                 │
-                │ • Store         │
-                │ • Validate      │
-                │ • Query         │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │       SQL       │
-                │                 │
-                │ • KPIs          │
-                │ • Aggregations  │
-                │ • Analysis      │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │   Power BI      │
-                │     + DAX       │
-                │                 │
-                │ • KPIs          │
-                │ • Visualization │
-                │ • Interactivity │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ BUSINESS        │
-                │ INSIGHTS        │
-                └─────────────────┘
-    
+The project answers key business questions such as:
 
----
+How much revenue and profit does the business generate?
+Which categories and sub-categories drive profitability?
+Which products generate the highest and lowest profits?
+Which regions perform best?
+Which customer segments are most valuable?
+How does discounting affect profitability?
+Which shipping modes are most profitable?
+Which customers generate the highest profit?
+How have sales and profit changed over time?
+Are there data-quality issues that could affect decision-making?
 
-  🛠️ Technology Stack
-
-| Technology       | Role                                              |
-| ---------------- | ------------------------------------------------- |
-|   Python         | Data loading, validation and exploratory analysis |
-|   Pandas         | Data manipulation and analysis                    |
-|   MySQL          | Structured relational data storage                |
-|   SQL            | Business analysis and aggregations                |
-|   Power BI       | Interactive dashboard and visualization           |
-|   DAX            | KPI and analytical measures                       |
-|   Git & GitHub   | Version control and project documentation         |
+| Technology       | Purpose                                         |
+| ---------------- | ----------------------------------------------- |
+|   Python         | Data loading, validation & exploratory analysis |
+|   Pandas         | Data manipulation and analysis                  |
+|   MySQL          | Relational data storage                         |
+|   SQL            | Business analysis and aggregation               |
+|   Power BI       | Interactive dashboard and visualization         |
+|   DAX            | KPI calculations and analytical measures        |
+|   Git & GitHub   | Version control and project documentation       |
 
 ---
 
