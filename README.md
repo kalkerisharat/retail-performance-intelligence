@@ -3,7 +3,7 @@
 
 >   End-to-end Business Intelligence & Analytics pipeline using Python, MySQL, SQL, Power BI and DAX  
 
-![Dashboard Preview](screenshots/dashboard.png)
+screenshot/Screenshot 2026-08-12 181031.png
 
    Overview
 
