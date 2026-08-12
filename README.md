@@ -44,56 +44,29 @@ The analysis was designed around practical business questions:
 
 ---
 
-  🏗️ End-to-End Architecture
+## 🏗️ End-to-End Architecture
 
-   text
-                 RAW TRANSACTION DATA
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Python + Pandas │
-                │                 │
-                │ • Load          │
-                │ • Validate      │
-                │ • Analyze       │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │      MySQL      │
-                │                 │
-                │ • Store         │
-                │ • Validate      │
-                │ • Query         │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │       SQL       │
-                │                 │
-                │ • KPIs          │
-                │ • Aggregations  │
-                │ • Analysis      │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │   Power BI      │
-                │     + DAX       │
-                │                 │
-                │ • KPIs          │
-                │ • Visualization │
-                │ • Interactivity │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ BUSINESS        │
-                │ INSIGHTS        │
-                └─────────────────┘
-    
+```mermaid
+flowchart TD
+    A[Raw Transaction Data] --> B[Python + Pandas]
+    B --> C[MySQL]
+    C --> D[SQL Business Analysis]
+    D --> E[Power BI + DAX]
+    E --> F[Business Insights]
 
----
+    B --> B1[Load & Validate]
+    B --> B2[Exploratory Analysis]
+
+    C --> C1[Structured Storage]
+    C --> C2[Data Validation]
+
+    D --> D1[KPI Analysis]
+    D --> D2[Profitability Analysis]
+    D --> D3[Customer & Product Analysis]
+
+    E --> E1[Interactive Dashboard]
+    E --> E2[KPI Measures]
+    E --> E3[Interactive Filters]
 
   🛠️ Technology Stack
 
