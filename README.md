@@ -1,81 +1,118 @@
-![alt text](<screenshot/Screenshot 2026-08-12 181031.png>)
-  📊 Superstore Sales Analytics
 
->   End-to-end Business Intelligence & Data Analytics Project using Python, MySQL, SQL, Power BI, and DAX  
+  📊 Retail Performance Intelligence
 
-An end-to-end sales analytics project that transforms raw Superstore transactional data into actionable business insights through   Python-based data analysis, MySQL data storage, SQL analytics, and an interactive Power BI dashboard  .
+>   End-to-end Business Intelligence & Analytics pipeline using Python, MySQL, SQL, Power BI and DAX  
 
-The project focuses on understanding   sales performance, profitability, customer behavior, regional performance, discount impact, product performance, and operational trends  .
+![Dashboard Preview](screenshots/dashboard.png)
+
+   Overview
+
+  Retail Performance Intelligence   is an end-to-end data analytics project that transforms raw retail transaction data into actionable business insights.
+
+The project combines   Python for data validation and analysis, MySQL for structured data storage, SQL for business analysis, and Power BI + DAX for interactive business intelligence reporting.  
+
+Rather than focusing only on revenue, the project analyzes the relationship between:
+
+- Sales
+- Profitability
+- Discounts
+- Products
+- Customers
+- Regions
+- Segments
+- Shipping
+- Time
+
+The objective is to identify   what drives revenue, what drives profit, and where the business is losing money.  
 
 ---
 
-   🚀 Project Overview
+   🎯 Business Questions
 
-Businesses generate large volumes of transactional data, but raw data alone does not provide actionable information.
+The analysis was designed around practical business questions:
 
-This project builds a complete analytics workflow:
+- What are the company's overall sales and profitability?
+- Which categories and sub-categories drive profit?
+- Which products generate the highest and lowest profit?
+- Which regions perform best?
+- Which customer segments are most profitable?
+- How does discounting affect profitability?
+- Which shipping modes perform best?
+- Which customers generate the most and least profit?
+- How do sales and profit change over time?
+- Are there data-quality issues that could affect analysis?
 
-   
-                    RAW DATA
-                       │
-                       ▼
-              ┌─────────────────┐
-              │ Python + Pandas │
-              │ Data Validation │
-              │ Exploratory     │
-              │ Analysis        │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │     MySQL       │
-              │ Data Storage    │
-              │ & Transformation│
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │      SQL        │
-              │ Business        │
-              │ Analysis        │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │ Power BI + DAX  │
-              │ Interactive BI  │
-              │ Dashboard       │
-              └────────┬────────┘
-                       │
-                       ▼
-               BUSINESS INSIGHTS
+---
 
-🎯 Business Objectives
+  🏗️ End-to-End Architecture
 
-The project answers key business questions such as:
+   text
+                 RAW TRANSACTION DATA
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Python + Pandas │
+                │                 │
+                │ • Load          │
+                │ • Validate      │
+                │ • Analyze       │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │      MySQL      │
+                │                 │
+                │ • Store         │
+                │ • Validate      │
+                │ • Query         │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │       SQL       │
+                │                 │
+                │ • KPIs          │
+                │ • Aggregations  │
+                │ • Analysis      │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │   Power BI      │
+                │     + DAX       │
+                │                 │
+                │ • KPIs          │
+                │ • Visualization │
+                │ • Interactivity │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ BUSINESS        │
+                │ INSIGHTS        │
+                └─────────────────┘
+    
 
-How much revenue and profit does the business generate?
-Which categories and sub-categories drive profitability?
-Which products generate the highest and lowest profits?
-Which regions perform best?
-Which customer segments are most valuable?
-How does discounting affect profitability?
-Which shipping modes are most profitable?
-Which customers generate the highest profit?
-How have sales and profit changed over time?
-Are there data-quality issues that could affect decision-making?
+---
 
-| Technology       | Purpose                                         |
-| ---------------- | ----------------------------------------------- |
-|   Python         | Data loading, validation & exploratory analysis |
-|   Pandas         | Data manipulation and analysis                  |
-|   MySQL          | Relational data storage                         |
-|   SQL            | Business analysis and aggregation               |
-|   Power BI       | Interactive dashboard and visualization         |
-|   DAX            | KPI calculations and analytical measures        |
-|   Git & GitHub   | Version control and project documentation       |
+  🛠️ Technology Stack
 
-superstore-sales-analytics/
+| Technology       | Role                                              |
+| ---------------- | ------------------------------------------------- |
+|   Python         | Data loading, validation and exploratory analysis |
+|   Pandas         | Data manipulation and analysis                    |
+|   MySQL          | Structured relational data storage                |
+|   SQL            | Business analysis and aggregations                |
+|   Power BI       | Interactive dashboard and visualization           |
+|   DAX            | KPI and analytical measures                       |
+|   Git & GitHub   | Version control and project documentation         |
+
+---
+
+  📁 Project Structure
+
+   text
+retail-performance-intelligence/
 │
 ├── python/
 │   ├── 01_load_data.py
@@ -93,91 +130,111 @@ superstore-sales-analytics/
 │
 ├── README.md
 └── .gitignore
+   
 
-📌 Dataset
+> File names may vary depending on the final project structure.
 
-The project uses the Superstore sales dataset, containing transactional information related to:
+---
 
-Orders
-Customers
-Products
-Categories
-Sub-Categories
-Sales
-Quantity
-Discounts
-Profit
-Regions
-Segments
-Shipping modes
-Order dates
+  📌 Dataset
 
+The project uses a retail Superstore transaction dataset containing   9,994 records and 21 attributes  .
 
-Dataset dimensions
+The dataset includes information about:
 
-Rows:       9,994
-Columns:       21
+  Orders
+  Customers
+  Products
+  Categories
+  Sub-Categories
+  Sales
+  Quantity
+  Discounts
+  Profit
+  Regions
+  Customer Segments
+  Shipping Modes
+  Order Dates
 
-🐍 Phase 1 — Python Data Analysis
+    Dataset validation
 
-Python was used as the initial analytical layer.
+   text
+Rows:              9,994
+Columns:              21
+Missing values:        0
+   
 
-Key tasks
-Loaded the raw CSV dataset using Pandas
-Validated dataset dimensions
-Checked missing values
-Verified numerical fields
-Analyzed sales and profitability
-Investigated discount behavior
-Identified top and bottom performing products
-Analyzed yearly and monthly trends
-Validated analytical results before loading the data into MySQL
+---
 
-Data validation
-Rows:             9,994
-Columns:             21
-Missing values:       0
+  🐍 1. Python Analysis
 
-Python analysis established the initial business findings and provided a reference point for validating the SQL and Power BI results.
+Python was used as the initial analytical and validation layer.
 
-🗄️ Phase 2 — MySQL Data Pipeline
+    Key tasks
 
-The validated dataset was loaded into MySQL for structured analysis.
+  Loaded transactional data using Pandas
+  Validated dataset dimensions
+  Checked missing values
+  Validated numerical fields
+  Analyzed sales and profitability
+  Investigated discount behavior
+  Identified top and bottom products
+  Analyzed yearly and monthly performance
+  Cross-checked results before loading data into MySQL
 
-Database
-Database: superstore_db
-Table:    superstore
+    Python → MySQL validation
 
-The Python-to-MySQL pipeline was validated using row counts and aggregate metrics.
-
-Validation
+   text
 Rows:       9,994
 Sales:      2,297,200.8603
 Profit:       286,397.0217
 Quantity:      37,873
+   
 
-This ensured that the data loaded into MySQL matched the source dataset.
+---
 
-🔎 Phase 3 — SQL Business Analysis
+  🗄️ 2. MySQL Data Layer
 
-SQL was used to answer business questions directly from the MySQL database.
+The validated dataset was loaded into MySQL for structured querying and business analysis.
 
-Analysis performed
-Overall business KPIs
-Category performance
-Sub-category profitability
-Discount analysis
-Top 10 products
-Bottom 10 products
-Yearly performance
-Monthly performance
-Regional performance
-Customer segment performance
-Shipping performance
-Top customers
-Bottom customers
-Data-quality validation
-SQL concepts used
+   text
+Database: superstore_db
+Table:    superstore
+   
+
+The MySQL layer was independently validated against the source dataset using:
+
+  Row counts
+  Sales totals
+  Profit totals
+  Quantity totals
+  Missing-value checks
+  Invalid-value checks
+
+---
+
+  🔎 3. SQL Business Analysis
+
+SQL was used to convert business questions into measurable analytical queries.
+
+    Analysis areas
+
+  Overall KPIs
+  Category performance
+  Sub-category profitability
+  Discount analysis
+  Product profitability
+  Yearly performance
+  Monthly performance
+  Regional performance
+  Customer segment performance
+  Shipping performance
+  Customer profitability
+  Data-quality validation
+
+    SQL techniques
+
+   text
 SELECT
 WHERE
 GROUP BY
@@ -191,309 +248,373 @@ ROUND()
 YEAR()
 STR_TO_DATE()
 DATE_FORMAT()
-📊 Phase 4 — Power BI Dashboard
+   
 
-The final analytical layer was built using Power BI.
+The complete SQL analysis is available in:
 
-The dashboard connects directly to the MySQL database using the Import connectivity mode.
+   text
+sql/Superstore_Analytics.sql
+   
 
-Key KPI Measures
-Total Sales = SUM('superstore_db superstore'[sales])
+---
 
-Total Profit = SUM('superstore_db superstore'[profit])
+  📊 4. Power BI Dashboard
 
-Total Quantity = SUM('superstore_db superstore'[quantity])
+Power BI acts as the final business intelligence layer.
 
+The dashboard connects to the   MySQL database   using   Import connectivity  .
+
+    Dashboard KPIs
+
+  Total Sales
+  Total Profit
+  Total Orders
+  Total Customers
+  Profit Margin
+
+    Analytical Visuals
+
+  Sales & Profit Trend
+  Sales & Profit by Category
+  Profit by Sub-Category
+  Regional Sales & Profit
+  Sales by Customer Segment
+  Profit Margin by Segment
+  Profit by Discount Level
+  Sales & Profit by Shipping Mode
+  Top 10 Products by Profit
+  Bottom 10 Products by Profit
+
+    Interactive Filters
+
+  Year
+  Region
+  Customer Segment
+
+---
+
+  🧮 DAX Measures
+
+The dashboard uses DAX measures rather than hard-coded values.
+
+   DAX
+Total Sales =
+SUM('superstore_db superstore'[sales])
+   
+
+   DAX
+Total Profit =
+SUM('superstore_db superstore'[profit])
+   
+
+   DAX
+Total Quantity =
+SUM('superstore_db superstore'[quantity])
+   
+
+   DAX
 Total Orders =
 DISTINCTCOUNT('superstore_db superstore'[order_id])
+   
 
+   DAX
 Total Customers =
 DISTINCTCOUNT('superstore_db superstore'[customer_id])
+   
 
+   DAX
 Profit Margin =
 DIVIDE([Total Profit], [Total Sales])
+   
 
+   DAX
 Average Order Value =
 DIVIDE([Total Sales], [Total Orders])
-📈 Dashboard Features
+   
 
-The Power BI dashboard includes:
+---
 
-KPI Overview
-Total Sales
-Total Profit
-Total Orders
-Total Customers
-Profit Margin
-Performance Analysis
-Sales & Profit Trend
-Sales & Profit by Category
-Profit by Sub-Category
-Regional Sales & Profit
-Sales by Customer Segment
-Profit Margin by Segment
-Profit by Discount Level
-Sales & Profit by Shipping Mode
-Product Analysis
-Top 10 Products by Profit
-Bottom 10 Products by Profit
-Interactive Filters
-Year
-Region
-Customer Segment
-💡 Key Business Insights
-1. Overall Performance
+  📈 Key Business Results
 
-The business generated:
+| KPI                     |      Result |
+| ----------------------- | ----------: |
+|   Total Sales           |   $2.297M   |
+|   Total Profit          |   $286.4K   |
+|   Total Orders          |     5,009   |
+|   Total Customers       |       793   |
+|   Total Quantity        |    37,873   |
+|   Profit Margin         |    12.47%   |
+|   Average Order Value   |   $458.61   |
 
-KPI	Value
-Total Sales	$2.297M
-Total Profit	$286.4K
-Total Orders	5,009
-Total Customers	793
-Profit Margin	12.47%
-Total Quantity	37,873
-2. Category Performance
+---
+
+  💡 Key Business Insights
+
+    🥇 Technology leads overall performance
 
 Technology generated the highest total sales and profit among the three major categories.
 
-Technology
-    ↓
-Highest Sales
-    ↓
-Highest Profit
+This makes Technology the strongest overall category based on both revenue and absolute profitability.
 
-This makes Technology the strongest overall category in the dataset.
+---
 
-3. Sub-Category Profitability
-
-The strongest profit contributors included:
-
-Copiers
-Phones
-Accessories
-Paper
-Binders
-
-However, several sub-categories generated losses.
-
-The largest loss was recorded by:
-
-Tables → -$17.7K
-
-This demonstrates why analyzing profit rather than sales alone is important.
-
-4. Discount Impact
-
-Discount analysis revealed a strong relationship between higher discount levels and weaker profitability.
-
-Examples:
-
-0% discount  → +$321K profit
-20% discount → +$90K profit
-30% discount → -$10K loss
-40% discount → -$23K loss
-70% discount → -$40K loss
-80% discount → -$31K loss
-
-Higher discount levels are associated with significantly weaker profitability in this dataset.
-
-This analysis shows why discount strategies should be evaluated against margin rather than revenue alone.
-
-5. Regional Performance
-
-The West region generated the highest:
-
-Sales
-Total Profit
-
-However, regional performance also shows that higher sales do not automatically translate into proportionally higher profitability.
-
-6. Customer Segment
-
-The Consumer segment generated the highest absolute Sales and Profit.
-
-However:
-
-Home Office → Highest Profit Margin
-
-This demonstrates the difference between:
-
-Largest segment
-
-and
-
-Most profitable segment relative to sales
-
-7. Shipping Performance
-
-Standard Class generated the highest:
-
-Sales
-Profit
-Number of Orders
-
-However, First Class achieved the highest profit margin among the shipping modes analyzed.
-
-Again:
-
-Highest volume ≠ highest profitability efficiency.
-
-8. Product Profitability
+    📦 Product profitability varies significantly
 
 The highest-profit product was:
 
-Canon imageCLASS 2200 Advanced Copier
+  Canon imageCLASS 2200 Advanced Copier  
+
+   text
 Profit ≈ $25.2K
+   
 
 The largest loss-making product was:
 
-Cubify CubeX 3D Printer Double Head Print
+  Cubify CubeX 3D Printer Double Head Print  
+
+   text
 Loss ≈ $8.9K
+   
 
-This highlights products that may deserve further investigation around:
+This highlights the importance of evaluating products using   profitability rather than sales alone  .
 
-Pricing
-Discounting
-Cost structure
-Demand
-Product strategy
-9. Customer Profitability
+---
+
+    💸 Discounts are strongly associated with weaker profitability
+
+Several higher-discount levels produced negative total profit.
+
+Examples:
+
+   text
+0% discount   → +$321K profit
+20% discount  → +$90K profit
+30% discount  → -$10K loss
+40% discount  → -$23K loss
+70% discount  → -$40K loss
+80% discount  → -$31K loss
+   
+
+The analysis suggests that aggressive discounting can significantly reduce profitability.
+
+>   Business implication:   Discount strategies should be evaluated against profit and margin, not revenue alone.
+
+---
+
+    🌎 West is the strongest region
+
+The   West   region generated the highest total sales and total profit.
+
+This makes it the strongest region in terms of absolute financial contribution.
+
+---
+
+    👥 Largest segment ≠ most profitable segment
+
+The   Consumer   segment generated the highest absolute sales and profit.
+
+However:
+
+   text
+Home Office → Highest Profit Margin
+   
+
+This demonstrates why both   absolute profit   and   profit margin   should be considered when evaluating customer segments.
+
+---
+
+    🚚 Shipping volume ≠ profitability efficiency
+
+Standard Class generated the highest:
+
+  Sales
+  Profit
+  Number of orders
+
+However,   First Class achieved the highest profit margin   among the shipping modes analyzed.
+
+This highlights the difference between   volume   and   profitability efficiency  .
+
+---
+
+    👤 Customer profitability requires more than revenue
 
 The most profitable customer was:
 
-Tamara Chand
+  Tamara Chand  
+
+   text
 Profit ≈ $8.98K
+   
 
 The largest loss-making customer was:
 
-Cindy Stewart
+  Cindy Stewart  
+
+   text
 Loss ≈ $6.63K
+   
 
-Interestingly, some customers generated substantial sales while still producing losses.
+Some customers generated substantial sales while still producing losses.
 
-This reinforces the importance of analyzing:
+> Revenue alone does not indicate customer value.
 
-Revenue + Profit
+---
 
-rather than revenue alone.
+  🔍 Data Quality Validation
 
-🔍 Data Quality Validation
+The dataset was validated throughout the pipeline.
 
-Before building the final dashboard, the dataset was validated at multiple stages.
+| Validation           |    Result |
+| -------------------- | --------: |
+| Total rows           |   9,994   |
+| Missing Order IDs    |       0   |
+| Missing Customer IDs |       0   |
+| Missing Sales        |       0   |
+| Missing Profit       |       0   |
+| Negative Sales       |       0   |
+| Invalid Quantity     |       0   |
+| Invalid Discount     |       0   |
 
-Validation results
-Total Rows             9,994
-Missing Order IDs          0
-Missing Customer IDs       0
-Missing Sales              0
-Missing Profit             0
-Negative Sales             0
-Invalid Quantity           0
-Invalid Discount           0
+Python and MySQL aggregate results were cross-checked before building the Power BI dashboard.
 
-The Python, MySQL, and Power BI layers were cross-validated using aggregate metrics to ensure consistency.
+---
 
-🔄 End-to-End Data Flow
+  🎯 Business Takeaways
 
-The final architecture demonstrates how multiple analytics technologies can work together:
+The analysis highlights several areas that could support business decision-making:
 
-                 ┌─────────────────┐
-                 │  Superstore CSV │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │ Python / Pandas │
-                 │                 │
-                 │ • Load          │
-                 │ • Validate      │
-                 │ • Analyze       │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │      MySQL      │
-                 │                 │
-                 │ • Store         │
-                 │ • Query         │
-                 │ • Aggregate     │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │     Power BI    │
-                 │                 │
-                 │ • DAX           │
-                 │ • Visualization │
-                 │ • Interaction  │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │ Business        │
-                 │ Insights        │
-                 └─────────────────┘
-📸 Dashboard Preview
+    1. Protect margins
 
-Add your final Power BI dashboard screenshot here:
+High-discount transactions should be monitored because several discount levels are associated with negative profitability.
 
-![Superstore Sales Analytics Dashboard](screenshot\Screenshot 2026-08-12 181031.png)
+    2. Investigate loss-making products
 
-🧠 What I Learned
+Products generating recurring losses should be reviewed for:
 
-This project helped develop practical experience in:
+  Pricing
+  Discounts
+  Cost structure
+  Demand
+  Product strategy
 
-Data cleaning and validation
-Exploratory data analysis
-Business KPI development
-SQL aggregation and analytical queries
-Relational database workflows
-Data validation across multiple tools
-Power BI dashboard development
-DAX measure creation
-Business-oriented data storytelling
-Translating business questions into analytical queries
+    3. Evaluate customers by profitability
 
-More importantly, the project demonstrates an end-to-end analytics workflow rather than isolated tool usage.
+High-revenue customers are not necessarily high-profit customers.
 
-🚀 Future Improvements
+    4. Look beyond total sales
+
+Regional, segment and shipping analysis demonstrates why   profit margin   is an important complement to revenue.
+
+---
+
+  🚀 Future Improvements
 
 Potential extensions include:
 
-Customer lifetime value analysis
-Customer segmentation
-RFM analysis
-Forecasting future sales
-Profitability prediction
-Automated Power BI refresh
-Additional geographic analysis
-Advanced DAX time-intelligence measures
-Executive-level KPI alerts
-Automated data pipeline
+  Customer Lifetime Value analysis
+  RFM customer segmentation
+  Sales forecasting
+  Profitability prediction
+  Advanced DAX time intelligence
+  Automated Power BI refresh
+  Geographic profitability analysis
+  Executive KPI alerts
+  Automated data pipeline
 
+---
 
-👨‍💻 Author
+  📚 Skills Demonstrated
 
-Sharat Kalkeri
+This project demonstrates practical experience with:
+
+  Data Analytics  
+
+  Exploratory Data Analysis
+  Data Validation
+  KPI Development
+  Business Analysis
+  Data Storytelling
+
+  SQL & Databases  
+
+  MySQL
+  Aggregations
+  GROUP BY
+  DISTINCT analysis
+  Date functions
+  Data-quality validation
+
+  Business Intelligence  
+
+  Power BI
+  DAX
+  Interactive dashboards
+  KPI cards
+  Slicers
+  Drill-down analysis
+  Business-focused visualization
+
+  Programming  
+
+  Python
+  Pandas
+
+  Development Workflow  
+
+  Git
+  GitHub
+  End-to-end analytics pipeline
+
+---
+
+  🔮 Future Direction
+
+The current project establishes the foundation for a broader retail intelligence platform.
+
+Future iterations could introduce:
+
+   text
+Historical Data
+      ↓
+Automated Pipeline
+      ↓
+Data Warehouse
+      ↓
+Advanced Analytics
+      ↓
+Forecasting
+      ↓
+Predictive Insights
+      ↓
+Executive Decision Support
+   
+
+---
+
+  👨‍💻 Author
+
+   Sharat Kalkeri
 
 Computer Science & Engineering
 
-Interested in:
+  Focus Areas  
 
-Data Analytics
-Business Intelligence
-SQL
-Python
-Power BI
-Cloud & Technology
+ Data Analytics  ·  SQL  ·  Python  ·  Power BI  ·  Business Intelligence  ·  Cloud Technology 
 
-⭐ Project Highlights
-9,994+        Transactions analyzed
-$2.297M       Total Sales
-$286.4K       Total Profit
-5,009         Orders
-793           Customers
-12.47%        Profit Margin
+---
 
-From raw transactional data to business decisions — using Python, SQL, MySQL, Power BI and DAX.
+   ⭐ Project Summary
+
+   text
+9,994        Transactions analyzed
+$2.297M      Total Sales
+$286.4K      Total Profit
+5,009        Orders
+793          Customers
+12.47%       Profit Margin
+   
+
+>   From raw retail transactions to business decisions — powered by Python, SQL, MySQL, Power BI and DAX.  
+
+ the one I'd use for the GitHub repository.   It is considerably more recruiter-oriented: the first screen immediately communicates   what you built, the architecture, the tools, the business problem, and measurable outcomes  , instead of making the recruiter read through a long project description first.
