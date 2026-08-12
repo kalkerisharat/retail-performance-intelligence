@@ -5,7 +5,7 @@ Yes. Here is the   complete  README.md  content in raw Markdown format  . You ca
 
 >   End-to-end Business Intelligence & Analytics pipeline using Python, MySQL, SQL, Power BI and DAX  
 
-![Retail Performance Intelligence Dashboard](screenshots/dashboard.png)
+![Retail Performance Intelligence Dashboard](screenshot/dashboard.png)
 
    🚀 Overview
 
