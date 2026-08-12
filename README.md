@@ -3,7 +3,7 @@
 
 >   End-to-end Business Intelligence & Analytics pipeline using Python, MySQL, SQL, Power BI and DAX  
 
-screenshot/Screenshot 2026-08-12 181031.png
+https://github.com/kalkerisharat/retail-performance-intelligence/blob/main/screenshot/Screenshot%202026-08-12%20181031.png
 
    Overview
 
