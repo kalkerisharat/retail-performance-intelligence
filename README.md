@@ -90,30 +90,6 @@ The project was designed to answer practical business questions:
 
 ---
 
-  📁 Project Structure
-
-   text
-retail-performance-intelligence/
-│
-├── python/
-│   ├── 01_load_data.py
-│   ├── 02_data_cleaning.py
-│   └── 03_sales_analysis.py
-│
-├── sql/
-│   └── Superstore_Analytics.sql
-│
-├── powerbi/
-│   └── Superstore_Sales_Analytics.pbix
-│
-├── screenshots/
-│   └── dashboard.png
-│
-├── README.md
-└── .gitignore
-   
-
----
 
   📌 Dataset
 
@@ -652,35 +628,3 @@ $286.4K      Total Profit
 >   From raw retail transactions to business decisions — powered by Python, SQL, MySQL, Power BI and DAX.  
 
     
-
-    One thing to check after pasting
-
-Your screenshot   must actually be located at  :
-
-   text
-screenshots/dashboard.png
-    
-
-GitHub paths are case-sensitive. So if your screenshot currently has a name such as:
-
-   text
-Screenshot 2026-08-12 181031.png
-   
-
-either rename it to:
-
-   text
-dashboard.png
-   
-
-or change the README's first image line to the   exact filename  .
-
-After saving the README:
-
-   bash
-git add README.md
-git commit -m "Update README documentation"
-git push
-   
-
-The uploaded version of your README already confirms the intended  screenshots/dashboard.png  structure, so this is the cleanest final arrangement. 
